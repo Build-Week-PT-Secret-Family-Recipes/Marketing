@@ -153,6 +153,20 @@ header .nav-bar ul a {
   font-size: 1.5rem;
   margin-right: 1.5em;
 }
+header .nav-bar ul a:hover {
+  font-weight: 600;
+}
+header .nav-bar ul .login-button {
+  border: 3px solid #272932;
+  padding: 0.1em 0.5em;
+}
+header .nav-bar ul .login-button:hover {
+  color: white;
+  background-color: #272932;
+}
+header .nav-bar ul .login-button:hover:active {
+  border: 1px solid #272932;
+}
 header .hero-header {
   background-image: url("../img/sfr-hero-header.jpg");
   height: 700;
@@ -170,4 +184,25 @@ header .hero-header .hero-text-container p {
   text-align: center;
   font-size: 6rem;
   padding: 0.5em 0.5em;
+  line-height: 0.9em;
+}
+.main-content {
+  padding: 6em 6em;
+}
+.main-content h2 {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+}
+.main-content p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5em;
+  line-height: 1.8rem;
+}
+footer {
+  background-color: #FFC857;
+}
+footer p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2em;
 }
