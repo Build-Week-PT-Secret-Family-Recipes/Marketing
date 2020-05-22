@@ -224,6 +224,9 @@ header .hero-header .hero-text-container p {
 .about-pg-content .about-card .about-text .team-name #bold {
   font-weight: 500;
 }
+.about-pg-content .about-card .about-text .team-name #bold #divider {
+  color: #C0B7B1;
+}
 .about-pg-content .about-card .about-text .team-bio {
   font-size: 1.2rem;
   line-height: 1.5rem;
