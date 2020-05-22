@@ -198,6 +198,60 @@ header .hero-header .hero-text-container p {
   margin-bottom: 1.5em;
   line-height: 1.8rem;
 }
+.about-pg-content {
+  padding: 6em 6em;
+  display: flex;
+  flex-direction: column;
+}
+.about-pg-content .about-card {
+  padding: 1em 1em;
+  display: flex;
+}
+.about-pg-content .about-card img {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px gray;
+}
+.about-pg-content .about-card .about-text {
+  padding-left: 2em;
+}
+.about-pg-content .about-card .about-text .team-name {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0.3em;
+}
+.about-pg-content .about-card .about-text .team-name #bold {
+  font-weight: 500;
+}
+.about-pg-content .about-card .about-text .team-bio {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.6em;
+}
+.about-pg-content .about-card .about-text .git-link {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.about-pg-content .about-card .about-text .git-link .git-logo {
+  box-shadow: none;
+  width: 30px;
+  height: 30px;
+}
+.about-pg-content .about-card .about-text .git-link a {
+  text-decoration: none;
+  color: #272932;
+  font-size: 1.2rem;
+  padding-left: 0.3em;
+  font-weight: 500;
+}
+.about-pg-content .about-card .about-text .git-link a:hover {
+  text-shadow: 1px 1px 1px gray;
+}
+.about-pg-content .about-card .about-text .git-link a:active {
+  color: blue;
+}
 footer {
   background-color: #FFC857;
 }
