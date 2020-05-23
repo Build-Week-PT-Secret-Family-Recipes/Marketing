@@ -22,6 +22,13 @@ footer{
             .a-href-styling( 2rem );
             font-weight: 600;
             margin-top: 1em;
+
+            @media @tablet{
+               .button-style(3px, .1em, .5em );
+               font-size: 1.6rem;
+               padding-bottom: .2em;
+            }
+
          }
       }
 
@@ -37,6 +44,9 @@ footer{
              //ADJUST WHEN TEXT BECOMES TOO BIG ON DESKTOP
              @media (max-width: 1000px){
                padding-left: .2em;
+            }
+            @media @tablet {
+               font-size: 1rem;
             }
          }
       }
@@ -58,6 +68,10 @@ footer{
 
             a{
                .a-href-styling(1.4rem);
+
+               @media @tablet {
+                  font-size: 1rem;
+               }
             }
          }
       }

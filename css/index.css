@@ -1,3 +1,6 @@
+/* Future Note:  There are some additional
+   media queries in-between these values
+   to address some edge cases*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -237,9 +240,9 @@ header .hero-header .hero-text-container p {
 .main-content .icon-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 2em;
 }
 .main-content .icon-container .desktop-icon {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -249,19 +252,16 @@ header .hero-header .hero-text-container p {
   margin-bottom: 2em;
 }
 .main-content .icon-container .desktop-icon i {
-  border: 1px solid red;
   display: inline-block;
   margin: 0 auto;
 }
 .main-content .icon-container .desktop-icon .icon-title {
-  border: 1px solid red;
   padding-top: 0.1em;
   font-family: 'Lobster', cursive;
   font-size: 3rem;
   text-align: center;
 }
 .main-content .icon-container .desktop-icon .icon-content {
-  border: 1px solid red;
   margin-top: 1em;
   text-align: center;
   font-size: 1.6rem;
@@ -280,14 +280,46 @@ header .hero-header .hero-text-container p {
     width: 30%;
   }
 }
-.main-content h2 {
-  font-size: 4rem;
-  margin-bottom: 0.5em;
+@media (max-width: 850px) {
+  .main-content .icon-container .desktop-icon {
+    width: 80%;
+  }
 }
-.main-content .main-text-block {
-  font-size: 1.6rem;
-  margin-bottom: 1.5em;
+@media (max-width: 850px) {
+  .main-content .icon-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.main-content .content-container {
+  display: flex;
+  margin-bottom: 3em;
+}
+.main-content .content-container .content-text-block {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 1em 2em 2em;
+}
+.main-content .content-container .content-text-block h2 {
+  font-size: 4rem;
+  margin-bottom: 0.25em;
+  font-family: 'Lobster', cursive;
+}
+.main-content .content-container .content-text-block .main-text-block {
+  font-size: 1.2rem;
   line-height: 1.8rem;
+}
+.main-content .content-container .content-image-block {
+  width: 50%;
+}
+.main-content .content-container .content-image-block.update-image {
+  background-image: url("../img/update-image.jpg");
+  background-position: center;
+}
+.main-content .content-container .content-image-block.create-image {
+  background-image: url("../img/create-image.jpg");
+  background-position: center;
+  order: -1;
 }
 .about-pg-content {
   padding: 6em 6em;
@@ -389,6 +421,21 @@ footer .footer-container .footer-box .login-button:active {
 footer .footer-container .footer-box .login-button:hover {
   font-weight: 600;
 }
+@media (max-width: 850px) {
+  footer .footer-container .footer-box .login-button {
+    border: 3px solid #272932;
+    padding: 0.1em 0.5em;
+    font-size: 1.6rem;
+    padding-bottom: 0.2em;
+  }
+  footer .footer-container .footer-box .login-button:hover {
+    color: white;
+    background-color: #272932;
+  }
+  footer .footer-container .footer-box .login-button:active {
+    border: 1px solid #272932;
+  }
+}
 footer .footer-container .footer-box.footer-contact .contact-text {
   width: 60%;
   padding-left: 5em;
@@ -399,6 +446,11 @@ footer .footer-container .footer-box.footer-contact .contact-text {
 @media (max-width: 1000px) {
   footer .footer-container .footer-box.footer-contact .contact-text {
     padding-left: 0.2em;
+  }
+}
+@media (max-width: 850px) {
+  footer .footer-container .footer-box.footer-contact .contact-text {
+    font-size: 1rem;
   }
 }
 footer .footer-container .footer-box.footer-login {
@@ -420,6 +472,11 @@ footer .footer-container .footer-box.footer-links .links a {
 }
 footer .footer-container .footer-box.footer-links .links a:hover {
   font-weight: 600;
+}
+@media (max-width: 850px) {
+  footer .footer-container .footer-box.footer-links .links a {
+    font-size: 1rem;
+  }
 }
 footer hr {
   border-color: #FFC8;

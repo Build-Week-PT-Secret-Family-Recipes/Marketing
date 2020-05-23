@@ -2,12 +2,14 @@
 
    padding: 1em 6em 6em;
 
+   //CONTAINER FOR 3 ICONS ON HOMEPAGE
    .icon-container{
       display:flex;
       justify-content: center;
+      margin-bottom: 2em;
 
       .desktop-icon{
-         border: 1px solid red;
+         //border: 1px solid red;
          display:flex;
          flex-direction: column;
          justify-content: center;
@@ -18,19 +20,19 @@
          //.icon-sizing-styles(4em,1em);//DELETE IF NOT USING
 
          i{
-            border:1px solid red;
+            //border:1px solid red;
             display:inline-block;
             margin: 0 auto;
          }
          .icon-title{
-            border:1px solid red;
+            //border:1px solid red;
             padding-top: .1em;
             font-family: @title-font;
             font-size: 3rem;
             text-align:center;
          }
          .icon-content{
-            border:1px solid red;
+            //border:1px solid red;
             margin-top:1em;
             text-align: center;
             font-size: 1.6rem;
@@ -48,18 +50,56 @@
             padding: 1.5em;
             width: 30%;
          } 
+
+         @media @tablet {
+            width: 80%;
+         }
          
       }//.desktop-icon
 
+      //CHANGE ICONS TO COLUMN AT TABLET
+      @media @tablet {
+         flex-direction: column;
+         align-items: center;
+      }
+
    }//.icon-container
 
-   h2{
-      font-size: 4rem;
-      margin-bottom: .5em;
-   }
-   .main-text-block{
-      font-size: 1.6rem;
-      margin-bottom: 1.5em;
-      line-height: 1.8rem;
-   }
-}
+   // PICTURES AND MAIN CONTENT BEGIN========================================
+  
+   .content-container{
+      display: flex;
+      margin-bottom: 3em;
+
+      .content-text-block{
+         //border: 2px solid red;
+         box-sizing: border-box;
+         width: 50%;
+         padding: 1em 2em 2em;
+         h2{
+            font-size: 4rem;
+            margin-bottom: .25em;
+            font-family: @title-font;
+         }
+         .main-text-block{
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+         }
+      }
+
+      .content-image-block{
+         width: 50%;
+      }
+      .content-image-block.update-image{
+         background-image: url("../img/update-image.jpg");
+         background-position: center;
+      }
+      .content-image-block.create-image{
+         background-image: url("../img/create-image.jpg");
+         background-position: center;
+         order: -1; //FOR DESKTOP
+      }
+      
+
+   }//.content-container
+}//.main-content
