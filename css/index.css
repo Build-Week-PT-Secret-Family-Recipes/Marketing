@@ -134,6 +134,9 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+header {
+  box-shadow: 1px 1px 30px whitesmoke;
+}
 header .main-h1 {
   display: flex;
   align-items: center;
@@ -241,6 +244,7 @@ header .hero-header .hero-text-container p {
 .about-pg-content .about-card {
   padding: 1em 1em;
   display: flex;
+  margin-bottom: 2em;
 }
 .about-pg-content .about-card img {
   width: 15%;
@@ -259,7 +263,7 @@ header .hero-header .hero-text-container p {
 .about-pg-content .about-card .about-text .team-name #bold {
   font-weight: 500;
 }
-.about-pg-content .about-card .about-text .team-name #bold #divider {
+.about-pg-content .about-card .about-text .team-name #divider {
   color: #C0B7B1;
 }
 .about-pg-content .about-card .about-text .team-bio {
@@ -296,15 +300,16 @@ footer {
 footer .footer-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2em;
 }
 footer .footer-container .footer-box {
-  border: 1px solid red;
   width: 33%;
 }
 footer .footer-container .footer-box .footer-title {
   font-family: 'Lobster', cursive;
   text-align: center;
   font-size: 2em;
+  margin: 1em 0 0.5em;
 }
 footer .footer-container .footer-box .login-button {
   display: inline-block;
@@ -314,6 +319,7 @@ footer .footer-container .footer-box .login-button {
   color: #272932;
   font-size: 2rem;
   font-weight: 600;
+  margin-top: 1em;
 }
 footer .footer-container .footer-box .login-button:hover {
   color: white;
@@ -325,16 +331,38 @@ footer .footer-container .footer-box .login-button:active {
 footer .footer-container .footer-box .login-button:hover {
   font-weight: 600;
 }
+footer .footer-container .footer-box.footer-contact .contact-text {
+  width: 60%;
+  padding-left: 5em;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  margin: 0 auto;
+}
 footer .footer-container .footer-box.footer-login {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+footer .footer-container .footer-box.footer-links .links {
+  width: 50%;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .footer-container .footer-box.footer-links .links a {
+  text-decoration: none;
+  color: #272932;
+  font-size: 1.4rem;
+}
+footer .footer-container .footer-box.footer-links .links a:hover {
+  font-weight: 600;
 }
 footer hr {
   border-color: #FFC8;
 }
 footer .copyright {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.2em;
 }
