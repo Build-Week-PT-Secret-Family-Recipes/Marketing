@@ -1,6 +1,32 @@
-.
 
+//NOT SURE IF I'M USING THIS - NEED TO CHECK 5-22-20
+.icon-sizing-styles(@padding,@marginBottom){
+   padding: @padding;
+   margin-bottom: @marginBottom;
+}
 
+//STYLE THE BUTTONS
+.button-style( @border-size, @padding-vertical, @padding-horizontal ){
+   border: @border-size solid @main-font-color;
+   padding: @padding-vertical @padding-horizontal;
+   &:hover{
+      color: white;
+      background-color: @main-font-color;
+   }
+   &:active{
+      border: 1px solid @main-font-color;
+   }
+}
+
+//STYLE THE <a> LINKS
+.a-href-styling( @font-variable ){
+   text-decoration: none;
+   color: @main-font-color;
+   font-size: @font-variable;
+   &:hover{
+      font-weight: 600;
+   }
+}
 
 
 

@@ -134,7 +134,11 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
-header h1 {
+header .main-h1 {
+  display: flex;
+  align-items: center;
+}
+header .main-h1 h1 {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
   padding: 0.5em 0.3em;
@@ -164,7 +168,7 @@ header .nav-bar ul .login-button:hover {
   color: white;
   background-color: #272932;
 }
-header .nav-bar ul .login-button:hover:active {
+header .nav-bar ul .login-button:active {
   border: 1px solid #272932;
 }
 header .hero-header {
@@ -175,8 +179,9 @@ header .hero-header {
   align-items: center;
 }
 header .hero-header .hero-text-container {
+  font-family: 'Lobster', cursive;
   color: whitesmoke;
-  background-color: hsla(120, 60%, 70%, 0.3);
+  background-color: hsla(120, 60%, 70%, 0.35);
   width: 50%;
 }
 header .hero-header .hero-text-container p {
@@ -184,16 +189,46 @@ header .hero-header .hero-text-container p {
   text-align: center;
   font-size: 6rem;
   padding: 0.5em 0.5em;
-  line-height: 0.9em;
+  line-height: 1.1em;
+  text-shadow: 1px 1px 1px black;
 }
 .main-content {
-  padding: 6em 6em;
+  padding: 1em 6em 6em;
+}
+.main-content .icon-container {
+  display: flex;
+  justify-content: center;
+}
+.main-content .icon-container .desktop-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  padding: 4em;
+  margin-bottom: 1em;
+}
+.main-content .icon-container .desktop-icon i {
+  display: inline-block;
+  margin: 0 auto;
+}
+.main-content .icon-container .desktop-icon .icon-title {
+  padding-top: 0.1em;
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+.main-content .icon-container .desktop-icon .icon-content {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 .main-content h2 {
   font-size: 4rem;
   margin-bottom: 0.5em;
 }
-.main-content p {
+.main-content .main-text-block {
   font-size: 1.6rem;
   margin-bottom: 1.5em;
   line-height: 1.8rem;
@@ -258,8 +293,48 @@ header .hero-header .hero-text-container p {
 footer {
   background-color: #FFC857;
 }
-footer p {
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-container .footer-box {
+  border: 1px solid red;
+  width: 33%;
+}
+footer .footer-container .footer-box .footer-title {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 2em;
+}
+footer .footer-container .footer-box .login-button {
+  display: inline-block;
+  border: 5px solid #272932;
+  padding: 0.2em 0.8em;
+  text-decoration: none;
+  color: #272932;
+  font-size: 2rem;
+  font-weight: 600;
+}
+footer .footer-container .footer-box .login-button:hover {
+  color: white;
+  background-color: #272932;
+}
+footer .footer-container .footer-box .login-button:active {
+  border: 1px solid #272932;
+}
+footer .footer-container .footer-box .login-button:hover {
+  font-weight: 600;
+}
+footer .footer-container .footer-box.footer-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer hr {
+  border-color: #FFC8;
+}
+footer .copyright {
   text-align: center;
   font-size: 1.5rem;
-  padding: 2em;
+  padding: 0.2em;
 }

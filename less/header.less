@@ -1,9 +1,14 @@
 header{
-   h1{
-      font-family: @title-font;
-      font-size: 3rem;
-      padding: .5em .3em;
+   .main-h1{
+      display:flex;
+      align-items: center;
+      h1{
+         font-family: @title-font;
+         font-size: 3rem;
+         padding: .5em .3em;
+      }
    }
+
    .nav-bar{
       display:flex;
       justify-content: space-between;
@@ -13,25 +18,31 @@ header{
          display: flex;
          
          a{
-            text-decoration: none;
-            color: @main-font-color;
-            font-size: 1.5rem;
+            .a-href-styling( 1.5rem );
             margin-right: 1.5em;
-            &:hover{
-               font-weight: 600;
+            // text-decoration: none;
+            // color: @main-font-color;
+            // font-size: 1.5rem;
+            // margin-right: 1.5em;
+            // &:hover{
+            //    font-weight: 600;
+            // }
+         }
+            .login-button{
+               .button-style(3px, .1em, .5em);
             }
-         }
-         .login-button{
-            border: 3px solid @main-font-color;
-            padding: .1em .5em;
-            &:hover{
-               color: white;
-               background-color: @main-font-color;
-            &:active{
-               border: 1px solid @main-font-color;
-            }
-         }
-         }
+         // .login-button{
+         //    border: 3px solid @main-font-color;
+         //    padding: .1em .5em;
+         //    &:hover{
+         //       color: white;
+         //       background-color: @main-font-color;
+         //    }
+         //    &:active{
+         //       border: 1px solid @main-font-color;
+         //    }
+         // }
+         
       }
       
    }
@@ -43,15 +54,17 @@ header{
       justify-content: center;
       align-items: center;
       .hero-text-container{
+         font-family: @title-font;
          color: whitesmoke;
-         background-color: hsla(120, 60%, 70%, 0.3);
+         background-color: hsla(120, 60%, 70%, 0.35);
          width: 50%;
          p{
             color: whitesmoke;
             text-align: center;
             font-size: 6rem;
             padding: .5em .5em;
-            line-height: .9em;
+            line-height: 1.1em;
+            text-shadow: 1px 1px 1px black;
          }
       }
    }
