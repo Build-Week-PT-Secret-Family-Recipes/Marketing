@@ -7,36 +7,51 @@
       justify-content: center;
 
       .desktop-icon{
+         border: 1px solid red;
          display:flex;
          flex-direction: column;
          justify-content: center;
          align-items: center;
          width:25%;
+         padding: 3.5em;
+         margin-bottom: 2em;
+         //.icon-sizing-styles(4em,1em);//DELETE IF NOT USING
 
-         .icon-sizing-styles(4em,1em);
-         //border: 1px solid gray;
          i{
+            border:1px solid red;
             display:inline-block;
-            //border:1px solid red;
             margin: 0 auto;
          }
          .icon-title{
+            border:1px solid red;
             padding-top: .1em;
             font-family: @title-font;
             font-size: 3rem;
-            //border:1px solid red;
             text-align:center;
          }
          .icon-content{
+            border:1px solid red;
             margin-top:1em;
             text-align: center;
             font-size: 1.6rem;
-            line-height: 2rem;
+            line-height: 1.8rem;
+          
+
+            @media @smallDesktop{
+               font-size: 1.2rem;
+               line-height: 1.6rem;
+               letter-spacing: -.05em;
+            }
          }
-         
-      }
       
-   }
+         @media @smallDesktop{
+            padding: 1.5em;
+            width: 30%;
+         } 
+         
+      }//.desktop-icon
+
+   }//.icon-container
 
    h2{
       font-size: 4rem;

@@ -39,3 +39,6 @@ students cross-section to deliver a minimum viable product (MVP) over the course
 
 - [ ]  For a second page, you could do an about us section that includes images of 
        the members of your team, and links to one another's socials/Github.
+
+
+       
