@@ -1,6 +1,7 @@
 /* Future Note:  There are some additional
    media queries in-between these values
-   to address some edge cases*/
+   to address some edge cases with
+   picture and icon sizing */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -154,8 +155,26 @@ header .nav-bar .main-h1 h1 {
   font-size: 3rem;
   padding: 0.5em 0.3em;
 }
+@media (max-width: 550px) {
+  header .nav-bar .main-h1 h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding: 0.25em;
+  }
+}
+@media (max-width: 550px) {
+  header .nav-bar .main-h1 {
+    flex-direction: column;
+  }
+}
 header .nav-bar nav ul {
   display: flex;
+}
+@media (max-width: 550px) {
+  header .nav-bar nav ul li {
+    text-align: center;
+    padding: 1.4em 0;
+  }
 }
 header .nav-bar nav ul a {
   text-decoration: none;
@@ -165,6 +184,17 @@ header .nav-bar nav ul a {
 }
 header .nav-bar nav ul a:hover {
   font-weight: 600;
+}
+@media (max-width: 550px) {
+  header .nav-bar nav ul a {
+    text-decoration: none;
+    color: #272932;
+    font-size: 2.5rem;
+    margin-right: 0;
+  }
+  header .nav-bar nav ul a:hover {
+    font-weight: 600;
+  }
 }
 header .nav-bar nav ul .login-button {
   border: 3px solid #272932;
@@ -176,6 +206,25 @@ header .nav-bar nav ul .login-button:hover {
 }
 header .nav-bar nav ul .login-button:active {
   border: 1px solid #272932;
+}
+@media (max-width: 550px) {
+  header .nav-bar nav ul .login-button {
+    border: 5px solid #272932;
+    padding: 0.05em 0.8em;
+  }
+  header .nav-bar nav ul .login-button:hover {
+    color: white;
+    background-color: #272932;
+  }
+  header .nav-bar nav ul .login-button:active {
+    border: 1px solid #272932;
+  }
+}
+@media (max-width: 550px) {
+  header .nav-bar nav ul {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 @media (max-width: 850px) {
   header .nav-bar nav {
@@ -229,9 +278,20 @@ header .hero-header .hero-text-container p {
     font-size: 3.5rem;
   }
 }
+@media (max-width: 550px) {
+  header .hero-header .hero-text-container {
+    width: 80%;
+    background-color: hsla(120, 60%, 70%, 0.4);
+  }
+}
 @media (max-width: 1180px) {
   header .hero-header {
     height: 500;
+  }
+}
+@media (max-width: 550px) {
+  header .hero-header {
+    background-position: center;
   }
 }
 .main-content {
@@ -305,21 +365,106 @@ header .hero-header .hero-text-container p {
   margin-bottom: 0.25em;
   font-family: 'Lobster', cursive;
 }
+@media (max-width: 1000px) {
+  .main-content .content-container .content-text-block h2 {
+    display: none;
+  }
+}
 .main-content .content-container .content-text-block .main-text-block {
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
+@media (max-width: 1000px) {
+  .main-content .content-container .content-text-block {
+    width: 100%;
+  }
+}
 .main-content .content-container .content-image-block {
   width: 50%;
+}
+@media (max-width: 1000px) {
+  .main-content .content-container .content-image-block {
+    width: 100%;
+  }
 }
 .main-content .content-container .content-image-block.update-image {
   background-image: url("../img/update-image.jpg");
   background-position: center;
 }
+@media (min-width: 1001px) {
+  .main-content .content-container .content-image-block.update-image p {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .main-content .content-container .content-image-block.update-image p {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    padding: 0.5em;
+    margin: 3em 0;
+    text-align: center;
+    width: 50%;
+    color: whitesmoke;
+    background-color: hsla(0, 0%, 0%, 0.35);
+  }
+}
+@media (max-width: 550px) {
+  .main-content .content-container .content-image-block.update-image p {
+    margin: 1.8em 0;
+  }
+}
+@media (max-width: 1000px) {
+  .main-content .content-container .content-image-block.update-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: -1;
+  }
+}
 .main-content .content-container .content-image-block.create-image {
   background-image: url("../img/create-image.jpg");
   background-position: center;
   order: -1;
+}
+@media (min-width: 1001px) {
+  .main-content .content-container .content-image-block.create-image p {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .main-content .content-container .content-image-block.create-image p {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    padding: 0.5em;
+    margin: 3em 0;
+    text-align: center;
+    width: 50%;
+    color: whitesmoke;
+    background-color: hsla(0, 0%, 0%, 0.35);
+  }
+}
+@media (max-width: 550px) {
+  .main-content .content-container .content-image-block.create-image p {
+    margin: 1.8em 0;
+  }
+}
+@media (max-width: 1000px) {
+  .main-content .content-container .content-image-block.create-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1000px) {
+  .main-content .content-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .main-content {
+    padding: 1em 0 0 ;
+  }
 }
 .about-pg-content {
   padding: 6em 6em;

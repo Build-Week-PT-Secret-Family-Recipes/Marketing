@@ -12,30 +12,61 @@ header{
       .main-h1{
          display:flex;
          align-items: center;
+
          h1{
             font-family: @title-font;
             font-size: 3rem;
             padding: .5em .3em;
+
+            @media @smartphone {
+               font-size: 5rem;
+               text-align: center;
+               padding: .25em; 
+            }
+         }
+
+         @media @smartphone {
+            flex-direction: column;
          }
       }
+
       nav{
 
          ul{
             display: flex;
-            
+            li{
+               @media @smartphone {
+                  text-align: center;
+                  padding: 1.4em 0;
+               }
+            }
             a{
                .a-href-styling( 1.5rem );
                margin-right: 1.5em;
+
+               @media @smartphone {
+                  .a-href-styling( 2.5rem );
+                  margin-right: 0;      
+               }
             }
-               .login-button{
-                  .button-style(3px, .1em, .5em);
-               }   
+            .login-button{
+               .button-style(3px, .1em, .5em);
+
+               @media @smartphone {
+                  .button-style(5px, .05em, .8em);
+
+               }
+            }   
+
+            @media @smartphone {
+               flex-direction: column;
+               justify-content: center;
+            }
          }
 
          @media @tablet {
             margin: 1em 0;
          }
-
       }
       //HEADER @ TABLET SIZE
       @media @tablet {
@@ -82,13 +113,25 @@ header{
             @media (max-width: 785px){
                font-size: 3.5rem;
             }
+
          }
+
+         @media @smartphone {
+            width: 80%;
+            background-color: hsla(120, 60%, 70%, 0.4);
+         }
+
       }//.hero-text-container
 
-        //ADJUST WHEN TEXT BECOMES TOO BIG ON DESKTOP
-        @media (max-width: 1180px){
-         height: 500;
-   }
+      //ADJUST HEIGTH WHEN TEXT BECOMES TOO BIG ON DESKTOP
+      @media (max-width: 1180px){
+      height: 500;
+      }
 
-   }
-}
+      @media @smartphone {
+         background-position: center;  //add to media queires ??
+      }
+
+   }//.hero-header
+
+}//.header

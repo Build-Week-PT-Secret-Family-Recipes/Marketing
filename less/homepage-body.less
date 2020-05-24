@@ -76,30 +76,117 @@
          box-sizing: border-box;
          width: 50%;
          padding: 1em 2em 2em;
+        
          h2{
             font-size: 4rem;
             margin-bottom: .25em;
             font-family: @title-font;
+
+            @media (max-width: 1000px){
+               display: none;
+            }
          }
          .main-text-block{
             font-size: 1.2rem;
             line-height: 1.8rem;
          }
+
+         @media (max-width: 1000px){
+            width: 100%;
+         }
       }
 
       .content-image-block{
          width: 50%;
+
+         @media (max-width: 1000px){
+            width: 100%;
+         }
       }
+
+      //NEED TO REFACTOR THESE INTO ONE SOMEHOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       .content-image-block.update-image{
          background-image: url("../img/update-image.jpg");
          background-position: center;
+   
+         p{
+            //ONLY DISPLAY ON MOBILE
+            @media (min-width: 1001px){
+               display: none;
+            }
+
+            @media (max-width: 1000px){
+               font-family: @title-font;
+               font-size: 4rem;
+               padding: .5em;
+               margin: 3em 0;
+               text-align: center;
+               width: 50%;
+               color: whitesmoke;
+               background-color: hsla(0, 0%, 0%, 0.35);
+            }
+            @media @smartphone {
+               margin: 1.8em 0;
+            }
+
+         }
+         //FLEX ON MOBILE TO CENTER TEXT
+         @media (max-width: 1000px){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            order: -1; //FOR MOBILE
+         }
+
       }
+
+      //NEED TO REFACTOR THESE INTO ONE SOMEHOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       .content-image-block.create-image{
          background-image: url("../img/create-image.jpg");
          background-position: center;
          order: -1; //FOR DESKTOP
+
+         p{
+            //ONLY DISPLAY ON MOBILE
+            @media (min-width: 1001px){
+               display: none;
+            }
+
+            @media (max-width: 1000px){
+               font-family: @title-font;
+               font-size: 4rem;
+               padding: .5em;
+               margin: 3em 0;
+               text-align: center;
+               width: 50%;
+               color: whitesmoke;
+               background-color: hsla(0, 0%, 0%, 0.35);
+            }
+            @media @smartphone {
+               margin: 1.8em 0;
+            }
+
+         }
+          //FLEX ON MOBILE TO CENTER TEXT
+          @media (max-width: 1000px){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
       }
       
+      //NEEDED TO ADJUST THIS @MEDIA BREAKPOINT SEPARATELY 
+      @media (max-width: 1000px){
+         flex-direction: column;
+         width: 100%;
+         
+      }
 
    }//.content-container
+
+   @media @smartphone{
+      padding: 1em 0 0 ;
+   }
+
 }//.main-content
