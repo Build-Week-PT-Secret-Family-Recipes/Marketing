@@ -134,6 +134,9 @@ body {
   font-family: 'Jost', sans-serif;
   color: #272932;
 }
+.current {
+  border-bottom: 2px solid #272932;
+}
 .main-container {
   max-width: 1600px;
   margin: 0 auto;
@@ -362,6 +365,7 @@ header .hero-header .hero-text-container p {
   font-size: 4rem;
   margin-bottom: 0.25em;
   font-family: 'Lobster', cursive;
+  text-shadow: 1px 1px 1px gray;
 }
 @media (max-width: 1000px) {
   .main-content .content-container .content-text-block h2 {
@@ -384,6 +388,7 @@ header .hero-header .hero-text-container p {
 }
 .main-content .content-container .content-image-block {
   width: 50%;
+  box-shadow: 1px 1px 5px gray;
 }
 @media (max-width: 1000px) {
   .main-content .content-container .content-image-block {
