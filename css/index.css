@@ -338,6 +338,11 @@ header .hero-header .hero-text-container p {
     width: 80%;
   }
 }
+@media (max-width: 550px) {
+  .main-content .icon-container .desktop-icon {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 850px) {
   .main-content .icon-container {
     flex-direction: column;
@@ -366,6 +371,11 @@ header .hero-header .hero-text-container p {
 .main-content .content-container .content-text-block .main-text-block {
   font-size: 1.2rem;
   line-height: 1.8rem;
+}
+@media (max-width: 550px) {
+  .main-content .content-container .content-text-block .main-text-block {
+    line-height: 1.5em;
+  }
 }
 @media (max-width: 1000px) {
   .main-content .content-container .content-text-block {

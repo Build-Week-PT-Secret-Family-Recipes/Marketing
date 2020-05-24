@@ -2,7 +2,8 @@
 
    padding: 1em 6em 6em;
 
-   //CONTAINER FOR 3 ICONS ON HOMEPAGE
+   //CONTAINER FOR 3 ICONS ON HOMEPAGE=======================================
+
    .icon-container{
       display:flex;
       justify-content: center;
@@ -17,7 +18,6 @@
          width:25%;
          padding: 3.5em;
          margin-bottom: 2em;
-         //.icon-sizing-styles(4em,1em);//DELETE IF NOT USING
 
          i{
             //border:1px solid red;
@@ -54,6 +54,9 @@
          @media @tablet {
             width: 80%;
          }
+         @media @smartphone {
+            margin-bottom: 0;
+         }
          
       }//.desktop-icon
 
@@ -89,6 +92,10 @@
          .main-text-block{
             font-size: 1.2rem;
             line-height: 1.8rem;
+
+            @media @smartphone {
+               line-height: 1.5em;
+            }
          }
 
          @media (max-width: 1000px){
