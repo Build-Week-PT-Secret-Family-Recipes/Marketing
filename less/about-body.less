@@ -1,5 +1,6 @@
 .about-pg-content {
 
+   margin-top:96px; //FOR FIXED HEADER
    padding:6em 6em; //TURN THIS TO A MIXIN ??
    display:flex;
    flex-direction: column;
@@ -105,6 +106,8 @@
    
    @media @tablet{
       padding: 3em 3em;
+      //CHANGE HEADER BACK TO STATIC
+      margin-top:0;
    }
    @media @smartphone{
       padding: .5em;

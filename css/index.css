@@ -145,6 +145,11 @@ header {
   box-shadow: 1px 1px 30px whitesmoke;
 }
 header .nav-bar {
+  position: fixed;
+  top: 0;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  width: 100%;
+  max-width: 1600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -182,6 +187,7 @@ header .nav-bar nav ul a {
   text-decoration: none;
   color: #272932;
   font-size: 1.5rem;
+  transition: font-weight 0.1s;
   margin-right: 1.5em;
 }
 header .nav-bar nav ul a:hover {
@@ -195,6 +201,7 @@ header .nav-bar nav ul a:hover {
 header .nav-bar nav ul .login-button {
   border: 3px solid #272932;
   padding: 0.1em 0.5em;
+  transition: background-color 1s;
 }
 header .nav-bar nav ul .login-button:hover {
   color: white;
@@ -207,6 +214,7 @@ header .nav-bar nav ul .login-button:active {
   header .nav-bar nav ul .login-button {
     border: 5px solid #272932;
     padding: 0.05em 0.8em;
+    transition: background-color 1s;
   }
   header .nav-bar nav ul .login-button:hover {
     color: white;
@@ -229,11 +237,13 @@ header .nav-bar nav ul .login-button:active {
 }
 @media (max-width: 850px) {
   header .nav-bar {
+    position: static;
     flex-direction: column;
     margin: 1em 0;
   }
 }
 header .hero-header {
+  margin-top: 96px;
   background-image: url("../img/sfr-hero-header.jpg");
   height: 700;
   display: flex;
@@ -283,6 +293,11 @@ header .hero-header .hero-text-container p {
 @media (max-width: 1180px) {
   header .hero-header {
     height: 500;
+  }
+}
+@media (max-width: 850px) {
+  header .hero-header {
+    margin-top: 0;
   }
 }
 @media (max-width: 550px) {
@@ -475,6 +490,7 @@ header .hero-header .hero-text-container p {
   }
 }
 .about-pg-content {
+  margin-top: 96px;
   padding: 6em 6em;
   display: flex;
   flex-direction: column;
@@ -573,6 +589,7 @@ header .hero-header .hero-text-container p {
 @media (max-width: 850px) {
   .about-pg-content {
     padding: 3em 3em;
+    margin-top: 0;
   }
 }
 @media (max-width: 550px) {
@@ -603,25 +620,13 @@ footer .footer-container .footer-box .footer-title {
   }
 }
 footer .footer-container .footer-box.footer-contact .contact-text {
-  width: 60%;
-  padding-left: 5em;
+  text-align: center;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  margin: 0 auto;
-}
-@media (max-width: 1000px) {
-  footer .footer-container .footer-box.footer-contact .contact-text {
-    padding-left: 0.2em;
-  }
 }
 @media (max-width: 850px) {
   footer .footer-container .footer-box.footer-contact .contact-text {
     font-size: 1rem;
-  }
-}
-@media (max-width: 650px) {
-  footer .footer-container .footer-box.footer-contact .contact-text {
-    text-align: center;
   }
 }
 footer .footer-container .footer-box.footer-login {
@@ -633,9 +638,11 @@ footer .footer-container .footer-box.footer-login .login-button {
   display: inline-block;
   border: 5px solid #272932;
   padding: 0.2em 0.8em;
+  transition: background-color 1s;
   text-decoration: none;
   color: #272932;
   font-size: 2rem;
+  transition: font-weight 0.1s;
   font-weight: 600;
   margin-top: 1em;
 }
@@ -653,6 +660,7 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
   footer .footer-container .footer-box.footer-login .login-button {
     border: 3px solid #272932;
     padding: 0.1em 0.5em;
+    transition: background-color 1s;
     font-size: 1.6rem;
     padding-bottom: 0.2em;
   }
@@ -680,6 +688,7 @@ footer .footer-container .footer-box.footer-links .links a {
   text-decoration: none;
   color: #272932;
   font-size: 1.4rem;
+  transition: font-weight 0.1s;
 }
 footer .footer-container .footer-box.footer-links .links a:hover {
   font-weight: 600;

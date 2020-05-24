@@ -1,10 +1,19 @@
 
 //HEADER INCLUDES: NAV BAR & JUMBO PIC=====================================
+
 header{
    box-shadow: 1px 1px 30px whitesmoke;
 
    //NAV BAR=========================================
+
    .nav-bar{
+      //FIXED HEADER
+      position: fixed; 
+      top:0;
+      background-color: hsla(0, 0%, 100%,.9);
+      width: 100%;
+      max-width: 1600px;
+
       display:flex;
       justify-content: space-between;
       align-items: center;
@@ -68,18 +77,20 @@ header{
       }
       //HEADER @ TABLET SIZE
       @media @tablet {
+         position: static;
          flex-direction: column;
          margin: 1em 0;
       }
       
    }//.nav-bar
-
-
+   
    //HEADER PICTURE=================================
 
    .hero-header{
+      //MARGIN FOR FIXED HEADER - DESKTOP
+      margin-top: 96px;
+
       background-image: url("../img/sfr-hero-header.jpg");
-      //background-position: center;  //add to media queires ??
       height: 700;
       display: flex;
       justify-content: center;
@@ -124,6 +135,11 @@ header{
       //ADJUST HEIGTH WHEN TEXT BECOMES TOO BIG ON DESKTOP
       @media (max-width: 1180px){
       height: 500;
+      }
+
+      @media @tablet{
+         //REMOVE FIXED HEADER
+         margin-top: 0;
       }
 
       @media @smartphone {

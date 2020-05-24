@@ -9,6 +9,8 @@
 .button-style( @border-size, @padding-vertical, @padding-horizontal ){
    border: @border-size solid @main-font-color;
    padding: @padding-vertical @padding-horizontal;
+   transition: background-color 1s;
+
    &:hover{
       color: white;
       background-color: @main-font-color;
@@ -23,6 +25,7 @@
    text-decoration: none;
    color: @main-font-color;
    font-size: @font-variable;
+   transition: font-weight .1s;
    &:hover{
       font-weight: 600;
    }
