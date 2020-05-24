@@ -485,6 +485,12 @@ header .hero-header .hero-text-container p {
   border-radius: 50%;
   box-shadow: 1px 1px 5px gray;
 }
+@media (max-width: 550px) {
+  .about-pg-content .about-card img {
+    margin: 0 auto 1em;
+    width: 120px;
+  }
+}
 .about-pg-content .about-card .about-text {
   padding-left: 2em;
 }
@@ -499,10 +505,20 @@ header .hero-header .hero-text-container p {
 .about-pg-content .about-card .about-text .team-name #divider {
   color: #C0B7B1;
 }
+@media (max-width: 550px) {
+  .about-pg-content .about-card .about-text .team-name {
+    text-align: center;
+  }
+}
 .about-pg-content .about-card .about-text .team-bio {
   font-size: 1.2rem;
   line-height: 1.5rem;
   margin-bottom: 0.6em;
+}
+@media (max-width: 550px) {
+  .about-pg-content .about-card .about-text .team-bio {
+    text-align: center;
+  }
 }
 .about-pg-content .about-card .about-text .git-link {
   display: flex;
@@ -513,6 +529,13 @@ header .hero-header .hero-text-container p {
   box-shadow: none;
   width: 30px;
   height: 30px;
+}
+@media (max-width: 550px) {
+  .about-pg-content .about-card .about-text .git-link .git-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.3em;
+  }
 }
 .about-pg-content .about-card .about-text .git-link a {
   text-decoration: none;
@@ -527,9 +550,29 @@ header .hero-header .hero-text-container p {
 .about-pg-content .about-card .about-text .git-link a:active {
   color: blue;
 }
+@media (max-width: 550px) {
+  .about-pg-content .about-card .about-text .git-link {
+    flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .about-pg-content .about-card .about-text {
+    padding-left: 0;
+  }
+}
+@media (max-width: 550px) {
+  .about-pg-content .about-card {
+    flex-direction: column;
+  }
+}
 @media (max-width: 850px) {
   .about-pg-content {
     padding: 3em 3em;
+  }
+}
+@media (max-width: 550px) {
+  .about-pg-content {
+    padding: 0.5em;
   }
 }
 footer {
@@ -549,39 +592,9 @@ footer .footer-container .footer-box .footer-title {
   font-size: 2em;
   margin: 1em 0 0.5em;
 }
-footer .footer-container .footer-box .login-button {
-  display: inline-block;
-  border: 5px solid #272932;
-  padding: 0.2em 0.8em;
-  text-decoration: none;
-  color: #272932;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-top: 1em;
-}
-footer .footer-container .footer-box .login-button:hover {
-  color: white;
-  background-color: #272932;
-}
-footer .footer-container .footer-box .login-button:active {
-  border: 1px solid #272932;
-}
-footer .footer-container .footer-box .login-button:hover {
-  font-weight: 600;
-}
-@media (max-width: 850px) {
-  footer .footer-container .footer-box .login-button {
-    border: 3px solid #272932;
-    padding: 0.1em 0.5em;
-    font-size: 1.6rem;
-    padding-bottom: 0.2em;
-  }
-  footer .footer-container .footer-box .login-button:hover {
-    color: white;
-    background-color: #272932;
-  }
-  footer .footer-container .footer-box .login-button:active {
-    border: 1px solid #272932;
+@media (max-width: 650px) {
+  footer .footer-container .footer-box {
+    width: 100%;
   }
 }
 footer .footer-container .footer-box.footer-contact .contact-text {
@@ -601,10 +614,55 @@ footer .footer-container .footer-box.footer-contact .contact-text {
     font-size: 1rem;
   }
 }
+@media (max-width: 650px) {
+  footer .footer-container .footer-box.footer-contact .contact-text {
+    text-align: center;
+  }
+}
 footer .footer-container .footer-box.footer-login {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+footer .footer-container .footer-box.footer-login .login-button {
+  display: inline-block;
+  border: 5px solid #272932;
+  padding: 0.2em 0.8em;
+  text-decoration: none;
+  color: #272932;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1em;
+}
+footer .footer-container .footer-box.footer-login .login-button:hover {
+  color: white;
+  background-color: #272932;
+}
+footer .footer-container .footer-box.footer-login .login-button:active {
+  border: 1px solid #272932;
+}
+footer .footer-container .footer-box.footer-login .login-button:hover {
+  font-weight: 600;
+}
+@media (max-width: 850px) {
+  footer .footer-container .footer-box.footer-login .login-button {
+    border: 3px solid #272932;
+    padding: 0.1em 0.5em;
+    font-size: 1.6rem;
+    padding-bottom: 0.2em;
+  }
+  footer .footer-container .footer-box.footer-login .login-button:hover {
+    color: white;
+    background-color: #272932;
+  }
+  footer .footer-container .footer-box.footer-login .login-button:active {
+    border: 1px solid #272932;
+  }
+}
+@media (max-width: 650px) {
+  footer .footer-container .footer-box.footer-login {
+    order: 3;
+  }
 }
 footer .footer-container .footer-box.footer-links .links {
   width: 50%;
@@ -624,6 +682,13 @@ footer .footer-container .footer-box.footer-links .links a:hover {
 @media (max-width: 850px) {
   footer .footer-container .footer-box.footer-links .links a {
     font-size: 1rem;
+  }
+}
+@media (max-width: 650px) {
+  footer .footer-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
 }
 footer hr {

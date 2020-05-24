@@ -15,6 +15,12 @@
           height:15%;
           border-radius: 50%;
           box-shadow: 1px 1px 5px gray;
+
+          @media @smartphone {
+             //display: inline-block;
+             margin: 0 auto 1em;
+             width: 120px;
+          }
        }
 
        .about-text{
@@ -31,11 +37,21 @@
              #divider{
                color: #C0B7B1;
             }
+
+            @media @smartphone{
+               text-align: center;
+            }
+
           }
           .team-bio{
             font-size: 1.2rem;
             line-height: 1.5rem;
             margin-bottom: .6em;
+
+            @media @smartphone {
+               text-align: center;
+            }
+
           }
           .git-link{
                display:flex;
@@ -46,6 +62,13 @@
                   box-shadow: none;
                   width: 30px;
                   height:30px;
+
+                  @media @smartphone {
+                     width: 40px;
+                     height: 40px;
+                     margin-bottom: .3em;
+                  }
+
                }
                a{
                   text-decoration: none;
@@ -61,11 +84,30 @@
                      color: blue
                   }
                }
+
+               @media @smartphone {
+                  flex-direction: column;
+               }
+
+           }//.get-link
+
+           @media @smartphone {
+              padding-left: 0;
            }
+
        }//.about-text
+
+      @media @smartphone {
+         flex-direction: column;
+      }
+
    }//.about.card
    
    @media @tablet{
       padding: 3em 3em;
    }
-}
+   @media @smartphone{
+      padding: .5em;
+   }
+
+}//.about-pg-content

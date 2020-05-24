@@ -16,6 +16,40 @@ footer{
             font-size: 2em;
             margin: 1em 0 .5em ;
          }
+
+         @media (max-width: 650px){
+            width: 100%;
+         }
+      }
+      //CONTACT BLOCK======================================================
+      .footer-box.footer-contact{
+         .contact-text{
+            //border: 2px red solid;
+            width: 60%; //MAY NEED TO CHANGE
+            padding-left: 5em;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            margin: 0 auto;
+
+             //ADJUST WHEN TEXT BECOMES TOO BIG ON DESKTOP
+            @media (max-width: 1000px){
+               padding-left: .2em;
+            }
+            @media @tablet {
+               font-size: 1rem;
+            }
+            @media (max-width: 650px){
+               text-align: center;
+            }
+         }
+      }
+
+       //LOGIN BLOCK======================================================
+      .footer-box.footer-login{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
          .login-button{
             display: inline-block;
             .button-style( 5px, .2em, .8em);
@@ -28,35 +62,13 @@ footer{
                font-size: 1.6rem;
                padding-bottom: .2em;
             }
-
+         }
+         @media (max-width: 650px){
+            order: 3; //why does this not work
          }
       }
 
-      .footer-box.footer-contact{
-         .contact-text{
-            //border: 2px red solid;
-            width: 60%; //MAY NEED TO CHANGE
-            padding-left: 5em;
-            font-size: 1.4rem;
-            line-height: 1.7rem;
-            margin: 0 auto;
-
-             //ADJUST WHEN TEXT BECOMES TOO BIG ON DESKTOP
-             @media (max-width: 1000px){
-               padding-left: .2em;
-            }
-            @media @tablet {
-               font-size: 1rem;
-            }
-         }
-      }
-
-      .footer-box.footer-login{
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-      }
-
+      //LINKS BLOCK======================================================
       .footer-box.footer-links{
          .links{
             //border: 2px solid red;
@@ -75,7 +87,13 @@ footer{
             }
          }
       }
-   }
+      @media (max-width: 650px){
+         flex-direction: column;
+         width: 100%;
+         align-items: center;
+      }
+
+   }//.footer-container
 
    hr{
       border-color: #FFC8;  
