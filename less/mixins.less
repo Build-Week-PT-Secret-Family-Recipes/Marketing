@@ -6,14 +6,14 @@
 //}
 
 //STYLE THE BUTTONS
-.button-style( @border-size, @padding-vertical, @padding-horizontal ){
-   border: @border-size solid @main-font-color;
+.button-style( @border-size, @padding-vertical, @padding-horizontal, @color){
+   border: @border-size solid @color;
    padding: @padding-vertical @padding-horizontal;
    transition: background-color 1s;
 
    &:hover{
       color: white;
-      background-color: @main-font-color;
+      background-color: @color;
    }
    &:active{
       border: 1px solid @main-font-color;

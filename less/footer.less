@@ -1,6 +1,6 @@
 footer{
    background-color: #FFC857;
-
+  
    .footer-container{
       display:flex;
       justify-content: space-between ;
@@ -14,7 +14,11 @@ footer{
             font-family: @title-font;
             text-align:center;
             font-size: 2em;
-            margin: 1em 0 .5em ;
+            margin: 1em auto .5em ;
+            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+            //text-shadow: 1px 1px 1px #3f40a1;
+            border-bottom: 1px solid #3f51b5;
+            width: 35%;
          }
 
          @media (max-width: 650px){
@@ -30,6 +34,11 @@ footer{
             text-align: center;
             font-size: 1.4rem;
             line-height: 1.7rem;
+            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+
+            span{
+               font-weight: 600;
+            }
          
             @media @tablet {
                font-size: 1rem;
@@ -46,13 +55,14 @@ footer{
 
          .login-button{
             display: inline-block;
-            .button-style( 5px, .2em, .8em);
+            .button-style( 5px, .2em, .8em, #3f51b5);
             .a-href-styling( 2rem );
             font-weight: 600;
             margin-top: 1em;
-
+            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+            
             @media @tablet{
-               .button-style(3px, .1em, .5em );
+               .button-style(3px, .1em, .5em, #3f51b5 );
                font-size: 1.6rem;
                padding-bottom: .2em;
             }
@@ -75,6 +85,7 @@ footer{
 
             a{
                .a-href-styling(1.4rem);
+               color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
 
                @media @tablet {
                   font-size: 1rem;
@@ -97,5 +108,6 @@ footer{
       text-align: center;
       font-size: 1rem;
       padding: .2em;
+      color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
    }
 }

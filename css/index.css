@@ -325,17 +325,22 @@ header .hero-header .hero-text-container p {
 .main-content .icon-container .desktop-icon i {
   display: inline-block;
   margin: 0 auto;
+  color: #FFC857;
+  text-shadow: 0px 1px 1px #3f51b5;
 }
 .main-content .icon-container .desktop-icon .icon-title {
   padding-top: 0.1em;
   font-family: 'Lobster', cursive;
   font-size: 3rem;
   text-align: center;
+  color: #3f51b5;
+  color: #FFC857;
 }
 .main-content .icon-container .desktop-icon .icon-content {
   margin-top: 1em;
   text-align: center;
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.8rem;
 }
 @media (max-width: 1250px) {
@@ -381,6 +386,7 @@ header .hero-header .hero-text-container p {
   margin-bottom: 0.25em;
   font-family: 'Lobster', cursive;
   text-shadow: 1px 1px 1px gray;
+  color: #3f51b5;
 }
 @media (max-width: 1000px) {
   .main-content .content-container .content-text-block h2 {
@@ -612,7 +618,10 @@ footer .footer-container .footer-box .footer-title {
   font-family: 'Lobster', cursive;
   text-align: center;
   font-size: 2em;
-  margin: 1em 0 0.5em;
+  margin: 1em auto 0.5em;
+  color: #3f51b5;
+  border-bottom: 1px solid #3f51b5;
+  width: 35%;
 }
 @media (max-width: 650px) {
   footer .footer-container .footer-box {
@@ -623,6 +632,10 @@ footer .footer-container .footer-box.footer-contact .contact-text {
   text-align: center;
   font-size: 1.4rem;
   line-height: 1.7rem;
+  color: #3f51b5;
+}
+footer .footer-container .footer-box.footer-contact .contact-text span {
+  font-weight: 600;
 }
 @media (max-width: 850px) {
   footer .footer-container .footer-box.footer-contact .contact-text {
@@ -636,7 +649,7 @@ footer .footer-container .footer-box.footer-login {
 }
 footer .footer-container .footer-box.footer-login .login-button {
   display: inline-block;
-  border: 5px solid #272932;
+  border: 5px solid #3f51b5;
   padding: 0.2em 0.8em;
   transition: background-color 1s;
   text-decoration: none;
@@ -645,10 +658,11 @@ footer .footer-container .footer-box.footer-login .login-button {
   transition: font-weight 0.1s;
   font-weight: 600;
   margin-top: 1em;
+  color: #3f51b5;
 }
 footer .footer-container .footer-box.footer-login .login-button:hover {
   color: white;
-  background-color: #272932;
+  background-color: #3f51b5;
 }
 footer .footer-container .footer-box.footer-login .login-button:active {
   border: 1px solid #272932;
@@ -658,7 +672,7 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
 }
 @media (max-width: 850px) {
   footer .footer-container .footer-box.footer-login .login-button {
-    border: 3px solid #272932;
+    border: 3px solid #3f51b5;
     padding: 0.1em 0.5em;
     transition: background-color 1s;
     font-size: 1.6rem;
@@ -666,7 +680,7 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
   }
   footer .footer-container .footer-box.footer-login .login-button:hover {
     color: white;
-    background-color: #272932;
+    background-color: #3f51b5;
   }
   footer .footer-container .footer-box.footer-login .login-button:active {
     border: 1px solid #272932;
@@ -689,6 +703,7 @@ footer .footer-container .footer-box.footer-links .links a {
   color: #272932;
   font-size: 1.4rem;
   transition: font-weight 0.1s;
+  color: #3f51b5;
 }
 footer .footer-container .footer-box.footer-links .links a:hover {
   font-weight: 600;
@@ -712,4 +727,5 @@ footer .copyright {
   text-align: center;
   font-size: 1rem;
   padding: 0.2em;
+  color: #3f51b5;
 }
