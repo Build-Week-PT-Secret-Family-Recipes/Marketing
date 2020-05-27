@@ -200,8 +200,18 @@ header .nav-bar nav .icon {
   padding: 3em 0 0.5em 0;
   text-decoration: none;
 }
+@media (min-width: 551px) {
+  header .nav-bar nav .icon {
+    display: none;
+  }
+}
 header .nav-bar nav .icon i {
   color: #272932;
+}
+@media (min-width: 551px) {
+  header .nav-bar nav .icon i {
+    display: none;
+  }
 }
 header .nav-bar nav ul {
   display: flex;
@@ -255,6 +265,7 @@ header .nav-bar nav ul .login-button:active {
 }
 @media (max-width: 550px) {
   header .nav-bar nav ul {
+    display: none;
     flex-direction: column;
     justify-content: center;
   }

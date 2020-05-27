@@ -42,17 +42,27 @@ header{
       nav{
 
               //============================================
+              
               .icon{
                  display: flex;
                  justify-content: center;
                  padding: 3em 0 .5em 0;
                  text-decoration: none;
+
+                 @media (min-width: 551px){
+                    display: none;
+                 }
                   
                i{
                   //display: inline-block;
-                  color: @main-font-color;       
+                  color: @main-font-color;     
+                  
+                  @media (min-width: 551px){
+                     display: none;
+                  }
+                  
                }
-            }
+              
             //============================================
 
          ul{
@@ -80,9 +90,11 @@ header{
                }
             }
 
-            @media @smartphone {
+            @media @smartphone {   
+               display: none;   
                flex-direction: column;
                justify-content: center;
+               
             }
          }
 
