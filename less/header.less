@@ -41,13 +41,27 @@ header{
       //LINKS AND BUTTON
       nav{
 
+              //============================================
+              .icon{
+                 display: flex;
+                 justify-content: center;
+                 padding: 3em 0 .5em 0;
+                 text-decoration: none;
+                  
+               i{
+                  //display: inline-block;
+                  color: @main-font-color;       
+               }
+            }
+            //============================================
+
          ul{
             display: flex;
 
             li{
                @media @smartphone {
                   text-align: center;
-                  padding: 1.2em 0;
+                  padding: 1.3em 0;
                }
             }
             a{
@@ -64,7 +78,7 @@ header{
                @media @smartphone {
                   .button-style(5px, .05em, .8em, @main-font-color);
                }
-            }   
+            }
 
             @media @smartphone {
                flex-direction: column;

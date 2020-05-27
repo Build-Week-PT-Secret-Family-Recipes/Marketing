@@ -194,13 +194,22 @@ header .nav-bar .main-h1 h1 {
     flex-direction: column;
   }
 }
+header .nav-bar nav .icon {
+  display: flex;
+  justify-content: center;
+  padding: 3em 0 0.5em 0;
+  text-decoration: none;
+}
+header .nav-bar nav .icon i {
+  color: #272932;
+}
 header .nav-bar nav ul {
   display: flex;
 }
 @media (max-width: 550px) {
   header .nav-bar nav ul li {
     text-align: center;
-    padding: 1.2em 0;
+    padding: 1.3em 0;
   }
 }
 header .nav-bar nav ul a {

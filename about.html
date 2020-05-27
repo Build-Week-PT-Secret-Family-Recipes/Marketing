@@ -31,7 +31,14 @@
             </div>
             
             <nav>
-               <ul>
+               
+               <!-- WORKING IN PROGRESS   -->
+               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fas fa-bars fa-3x"></i>
+               </a>
+               <!-- WORKING IN PROGRESS   -->
+
+               <ul id="header-links">
                   <li><a href="index.html">Home</a></li>
                   <li><a class="current" href="about.html">About</a></li>
                   <li><a class="login-button" href="https://secret-family-recipes.netlify.app/">Login</a></li>
@@ -167,6 +174,21 @@
    </footer>
 
    </div><!-- main-container -->
+
+   <script>
+
+      function myFunction() {
+
+        var mobileLinks = document.getElementById("header-links");
+
+        if (mobileLinks.style.display === "flex") {
+          mobileLinks.style.display = "none";
+        } else {
+          mobileLinks.style.display = "flex";
+        }
+      }
+
+   </script>
 
 </body>
 </html>
