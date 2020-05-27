@@ -2,6 +2,28 @@
    media queries in-between these values
    to address some edge cases with
    picture and icon sizing */
+@media (min-width: 1001px) {
+  .content-header-media {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .content-header-media {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    padding: 0.5em;
+    margin: 3em 0;
+    text-align: center;
+    width: 50%;
+    color: whitesmoke;
+    background-color: hsla(0, 0%, 0%, 0.35);
+  }
+}
+@media (max-width: 550px) {
+  .content-header-media {
+    margin: 1.8em 0;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -141,15 +163,13 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
-header {
-  box-shadow: 1px 1px 30px whitesmoke;
-}
 header .nav-bar {
   position: fixed;
   top: 0;
   background-color: hsla(0, 0%, 100%, 0.9);
   width: 100%;
   max-width: 1600px;
+  box-shadow: 1px 1px 15px gray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -240,12 +260,13 @@ header .nav-bar nav ul .login-button:active {
     position: static;
     flex-direction: column;
     margin: 1em 0;
+    box-shadow: none;
   }
 }
 header .hero-header {
   margin-top: 96px;
   background-image: url("../img/sfr-hero-header.jpg");
-  height: 700;
+  height: 650;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,8 +281,8 @@ header .hero-header .hero-text-container p {
   color: whitesmoke;
   text-align: center;
   font-size: 6rem;
-  padding: 0.5em 0.5em;
-  line-height: 1.1em;
+  padding: 0.4em 0.5em;
+  line-height: 1em;
   text-shadow: 1px 1px 1px black;
 }
 @media (max-width: 1180px) {
@@ -315,8 +336,8 @@ header .hero-header .hero-text-container p {
 }
 .main-content .icon-container .desktop-icon {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 25%;
   padding: 3.5em;
@@ -333,7 +354,6 @@ header .hero-header .hero-text-container p {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
   text-align: center;
-  color: #3f51b5;
   color: #FFC857;
 }
 .main-content .icon-container .desktop-icon .icon-content {
@@ -490,6 +510,11 @@ header .hero-header .hero-text-container p {
     width: 100%;
   }
 }
+@media (max-width: 850px) {
+  .main-content {
+    padding: 1em 3em 3em;
+  }
+}
 @media (max-width: 550px) {
   .main-content {
     padding: 1em 0 0 ;
@@ -619,8 +644,8 @@ footer .footer-container .footer-box .footer-title {
   text-align: center;
   font-size: 2em;
   margin: 1em auto 0.5em;
-  color: #3f51b5;
-  border-bottom: 1px solid #3f51b5;
+  color: #272932;
+  border-bottom: 1px solid #272932;
   width: 35%;
 }
 @media (max-width: 650px) {
@@ -632,7 +657,7 @@ footer .footer-container .footer-box.footer-contact .contact-text {
   text-align: center;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  color: #3f51b5;
+  color: #272932;
 }
 footer .footer-container .footer-box.footer-contact .contact-text span {
   font-weight: 600;
@@ -649,20 +674,19 @@ footer .footer-container .footer-box.footer-login {
 }
 footer .footer-container .footer-box.footer-login .login-button {
   display: inline-block;
-  border: 5px solid #3f51b5;
+  border: 5px solid #272932;
   padding: 0.2em 0.8em;
   transition: background-color 1s;
   text-decoration: none;
-  color: #272932;
   font-size: 2rem;
   transition: font-weight 0.1s;
   font-weight: 600;
   margin-top: 1em;
-  color: #3f51b5;
+  color: #272932;
 }
 footer .footer-container .footer-box.footer-login .login-button:hover {
   color: white;
-  background-color: #3f51b5;
+  background-color: #272932;
 }
 footer .footer-container .footer-box.footer-login .login-button:active {
   border: 1px solid #272932;
@@ -672,7 +696,7 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
 }
 @media (max-width: 850px) {
   footer .footer-container .footer-box.footer-login .login-button {
-    border: 3px solid #3f51b5;
+    border: 3px solid #272932;
     padding: 0.1em 0.5em;
     transition: background-color 1s;
     font-size: 1.6rem;
@@ -680,7 +704,7 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
   }
   footer .footer-container .footer-box.footer-login .login-button:hover {
     color: white;
-    background-color: #3f51b5;
+    background-color: #272932;
   }
   footer .footer-container .footer-box.footer-login .login-button:active {
     border: 1px solid #272932;
@@ -700,10 +724,9 @@ footer .footer-container .footer-box.footer-links .links {
 }
 footer .footer-container .footer-box.footer-links .links a {
   text-decoration: none;
-  color: #272932;
   font-size: 1.4rem;
   transition: font-weight 0.1s;
-  color: #3f51b5;
+  color: #272932;
 }
 footer .footer-container .footer-box.footer-links .links a:hover {
   font-weight: 600;
@@ -727,5 +750,5 @@ footer .copyright {
   text-align: center;
   font-size: 1rem;
   padding: 0.2em;
-  color: #3f51b5;
+  color: #272932;
 }

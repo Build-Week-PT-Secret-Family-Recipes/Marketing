@@ -1,9 +1,4 @@
 
-//NOT SURE IF I'M USING THIS - NEED TO CHECK 5-22-20
-// .icon-sizing-styles(@padding,@marginBottom){
-//    padding: @padding;
-//    margin-bottom: @marginBottom;
-//}
 
 //STYLE THE BUTTONS
 .button-style( @border-size, @padding-vertical, @padding-horizontal, @color){
@@ -31,22 +26,34 @@
    }
 }
 
+//FLEX BASICS
+.flex-container( @justify){
+   display: flex;
+   justify-content: @justify;
+}
 
+// @MEDIA FOR CHANGING THE CONTENT HEADERS "UPDATE" AND "CREATE"
+// BETWEEN DESKTOP AND MOBILE
+.content-header-media{
 
+    // ONLY DISPLAY THIS HEADER ON 
+    // MOBILE SIZING
+    @media (min-width: 1001px){
+      display: none;
+   }
 
-//EXAMPLE - DELETE THIS MIKE !!!!
-// .button-global-class(@background,@fontColor,@borderRadius) {
-//    background-color: @background ;
-//    color: @fontColor ;
-//    border-radius: @borderRadius ;
-//    font-size: 1.75rem ;
-//    font-weight: 900;
-//    text-align: center;
-//    width: 80%;
-//    padding: .8em 1em ;
+   @media (max-width: 1000px){
+      font-family: @title-font;
+      font-size: 4rem;
+      padding: .5em;
+      margin: 3em 0;
+      text-align: center;
+      width: 50%;
+      color: whitesmoke;
+      background-color: hsla(0, 0%, 0%, 0.35);
+   }
+   @media @smartphone {
+      margin: 1.8em 0;
+   }
 
-//    &:hover {
-//        background-color: lighten(@eastern-blue, 10%);
-//    }
-
-// }
+}

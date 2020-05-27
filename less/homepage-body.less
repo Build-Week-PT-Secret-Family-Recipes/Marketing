@@ -5,46 +5,37 @@
    //CONTAINER FOR 3 ICONS ON HOMEPAGE=======================================
 
    .icon-container{
-      display:flex;
-      justify-content: center;
+      .flex-container(center);
       margin-bottom: 2em;
 
       .desktop-icon{
-         //border: 1px solid red;
-         display:flex;
+         .flex-container(center);
          flex-direction: column;
-         justify-content: center;
          align-items: center;
          width:25%;
          padding: 3.5em;
          margin-bottom: 2em;
 
          i{
-            //border:1px solid red;
             display:inline-block;
             margin: 0 auto;
-            //color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
             color:#FFC857;
             text-shadow: 0px 1px 1px #3f51b5;
          }
          .icon-title{
-            //border:1px solid red;
             padding-top: .1em;
             font-family: @title-font;
             font-size: 3rem;
             text-align:center;
-            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
             color:#FFC857;
          }
          .icon-content{
-            //border:1px solid red;
             margin-top:1em;
             text-align: center;
             font-size: 1.6rem;
             font-weight: 300;
             line-height: 1.8rem;
           
-
             @media @smallDesktop{
                font-size: 1.2rem;
                line-height: 1.6rem;
@@ -81,7 +72,6 @@
       margin-bottom: 3em;
 
       .content-text-block{
-         //border: 2px solid red;
          box-sizing: border-box;
          width: 50%;
          padding: 1em 2em 2em;
@@ -91,7 +81,7 @@
             margin-bottom: .25em;
             font-family: @title-font;
             text-shadow: 1px 1px 1px gray;
-            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+            color: #3f51b5;  
 
             @media (max-width: 1000px){
                display: none;
@@ -119,74 +109,38 @@
             width: 100%;
          }
       }
-
-      //NEED TO REFACTOR THESE INTO ONE SOMEHOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      // THE "UPDATE" IMAGE BLOCK
       .content-image-block.update-image{
+
          background-image: url("../img/update-image.jpg");
          background-position: center;
-   
+
          p{
-            //ONLY DISPLAY ON MOBILE
-            @media (min-width: 1001px){
-               display: none;
-            }
-
-            @media (max-width: 1000px){
-               font-family: @title-font;
-               font-size: 4rem;
-               padding: .5em;
-               margin: 3em 0;
-               text-align: center;
-               width: 50%;
-               color: whitesmoke;
-               background-color: hsla(0, 0%, 0%, 0.35);
-            }
-            @media @smartphone {
-               margin: 1.8em 0;
-            }
-
+            .content-header-media();
          }
+
          //FLEX ON MOBILE TO CENTER TEXT
          @media (max-width: 1000px){
-            display: flex;
-            justify-content: center;
+            .flex-container(center);
             align-items: center;
             order: -1; //FOR MOBILE
          }
 
       }
-
-      //NEED TO REFACTOR THESE INTO ONE SOMEHOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      //THE "CREATE" IMAGE BLOCK
       .content-image-block.create-image{
+
          background-image: url("../img/create-image.jpg");
          background-position: center;
          order: -1; //FOR DESKTOP
 
          p{
-            //ONLY DISPLAY ON MOBILE
-            @media (min-width: 1001px){
-               display: none;
-            }
-
-            @media (max-width: 1000px){
-               font-family: @title-font;
-               font-size: 4rem;
-               padding: .5em;
-               margin: 3em 0;
-               text-align: center;
-               width: 50%;
-               color: whitesmoke;
-               background-color: hsla(0, 0%, 0%, 0.35);
-            }
-            @media @smartphone {
-               margin: 1.8em 0;
-            }
-
+            .content-header-media();
          }
+
           //FLEX ON MOBILE TO CENTER TEXT
           @media (max-width: 1000px){
-            display: flex;
-            justify-content: center;
+            .flex-container(center);
             align-items: center;
          }
 
@@ -195,12 +149,14 @@
       //NEEDED TO ADJUST THIS @MEDIA BREAKPOINT SEPARATELY 
       @media (max-width: 1000px){
          flex-direction: column;
-         width: 100%;
-         
+         width: 100%;       
       }
 
    }//.content-container
 
+   @media @tablet{
+      padding: 1em 3em 3em;
+   }
    @media @smartphone{
       padding: 1em 0 0 ;
    }

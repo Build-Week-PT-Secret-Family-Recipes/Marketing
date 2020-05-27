@@ -2,21 +2,22 @@
 //HEADER INCLUDES: NAV BAR & JUMBO PIC=====================================
 
 header{
-   box-shadow: 1px 1px 30px whitesmoke;
 
    //NAV BAR=========================================
 
    .nav-bar{
+
       //FIXED HEADER
       position: fixed; 
       top:0;
       background-color: hsla(0, 0%, 100%,.9);
       width: 100%;
       max-width: 1600px;
+      box-shadow: 1px 1px 15px gray;
 
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
+      //FLEX PROPERTIES
+      .flex-container(space-between);
+      align-items: center; 
 
       .main-h1{
          display:flex;
@@ -37,11 +38,12 @@ header{
             flex-direction: column;
          }
       }
-
+      //LINKS AND BUTTON
       nav{
 
          ul{
             display: flex;
+
             li{
                @media @smartphone {
                   text-align: center;
@@ -61,7 +63,6 @@ header{
 
                @media @smartphone {
                   .button-style(5px, .05em, .8em, @main-font-color);
-
                }
             }   
 
@@ -77,9 +78,11 @@ header{
       }
       //HEADER @ TABLET SIZE
       @media @tablet {
+         //REMOVE FIXED HEADER
          position: static;
          flex-direction: column;
          margin: 1em 0;
+         box-shadow: none;
       }
       
    }//.nav-bar
@@ -87,29 +90,31 @@ header{
    //HEADER PICTURE=================================
 
    .hero-header{
-      //MARGIN FOR FIXED HEADER - DESKTOP
+      //MARGIN TO ADJUST FOR FIXED HEADER ( ON DESKTOP ONLY )
       margin-top: 96px;
 
       background-image: url("../img/sfr-hero-header.jpg");
-      height: 700;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 650;
+      
+      .flex-container(center);
+      align-items: center; 
 
       .hero-text-container{
          font-family: @title-font;
          color: whitesmoke;
          background-color: hsla(120, 60%, 70%, 0.35);
          width: 50%;
+
          p{
             color: whitesmoke;
             text-align: center;
             font-size: 6rem;
-            padding: .5em .5em;
-            line-height: 1.1em;
+            padding: .4em .5em;
+            line-height: 1em;
             text-shadow: 1px 1px 1px black;
 
             //NEEDED TO DOWNSIZE HEADER TEXT PROGRESSIVELY
+            //IN ORDER TO MAKE WORK
             @media (max-width: 1180px){
                font-size: 5rem;
             }
@@ -143,7 +148,7 @@ header{
       }
 
       @media @smartphone {
-         background-position: center;  //add to media queires ??
+         background-position: center;  
       }
 
    }//.hero-header

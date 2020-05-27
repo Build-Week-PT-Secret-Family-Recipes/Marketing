@@ -15,9 +15,9 @@ footer{
             text-align:center;
             font-size: 2em;
             margin: 1em auto .5em ;
-            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+            color: @main-font-color;  //TO MATCH LOGIN - KEEP????????
             //text-shadow: 1px 1px 1px #3f40a1;
-            border-bottom: 1px solid #3f51b5;
+            border-bottom: 1px solid @main-font-color;
             width: 35%;
          }
 
@@ -30,11 +30,10 @@ footer{
       .footer-box.footer-contact{
 
          .contact-text{
-            //border: 2px red solid;
             text-align: center;
             font-size: 1.4rem;
             line-height: 1.7rem;
-            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+            color: @main-font-color;
 
             span{
                font-weight: 600;
@@ -55,20 +54,20 @@ footer{
 
          .login-button{
             display: inline-block;
-            .button-style( 5px, .2em, .8em, #3f51b5);
+            .button-style( 5px, .2em, .8em, @main-font-color);
             .a-href-styling( 2rem );
             font-weight: 600;
             margin-top: 1em;
-            color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+            color: @main-font-color;
             
             @media @tablet{
-               .button-style(3px, .1em, .5em, #3f51b5 );
+               .button-style(3px, .1em, .5em, @main-font-color );
                font-size: 1.6rem;
                padding-bottom: .2em;
             }
          }
          @media (max-width: 650px){
-            order: 3; //why does this not work
+            order: 3; 
          }
       }
 
@@ -76,8 +75,7 @@ footer{
       
       .footer-box.footer-links{
          .links{
-            //border: 2px solid red;
-            width: 50%;  //MAY NEED TO CHANGE
+            width: 50%;  
             font-size: 1.4rem;
             line-height: 2rem;
             margin: 0 auto;
@@ -85,7 +83,7 @@ footer{
 
             a{
                .a-href-styling(1.4rem);
-               color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+               color: @main-font-color;
 
                @media @tablet {
                   font-size: 1rem;
@@ -108,6 +106,6 @@ footer{
       text-align: center;
       font-size: 1rem;
       padding: .2em;
-      color: #3f51b5;  //TO MATCH LOGIN - KEEP????????
+      color: @main-font-color;  
    }
 }
