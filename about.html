@@ -32,17 +32,16 @@
             
             <nav>
                
-               <!-- WORKING IN PROGRESS   -->
                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                   <i class="fas fa-bars fa-3x"></i>
                </a>
-               <!-- WORKING IN PROGRESS   -->
-
+           
                <ul id="header-links">
                   <li><a href="index.html">Home</a></li>
                   <li><a class="current" href="about.html">About</a></li>
                   <li><a class="login-button" href="https://secret-family-recipes.netlify.app/">Login</a></li>
                </ul>
+
             </nav>
          </div>
     
@@ -63,6 +62,23 @@
                   <img class="git-logo" src="../img/github-logo.png"/>
                   <a href="https://github.com/immichaelharris">github.com/immichaelharris</a> 
                </div>          
+            </div>
+         </div>
+
+         <div class="about-card">
+            <img src="../img/mike-benton-web.jpg" alt="Mike Benton"/> 
+            <div class="about-text">
+               <p class="team-name"><span id="bold">Mike Benton</span>  <span id="divider">|</span> Web UI Developer</p>
+               <p class="team-bio">Starting out my career as a musician, programming wasn't on my radar, but while managing an eCommerce site for a 
+                  music store I rapidly realized how much I enjoyed the high level of detail and inherit creativity that reside in programming and web design.  I've been 
+                  hooked since then, studying many hours, and even taking some classes. Even so, I've never been able to cross 
+                  the bridge of taking the knowledge I was learning and applying it to an employable skillset .  Lambda has been great putting the pieces together - 
+                  continuously pushing me into new areas much quicker than I previously thought possible.
+               </p>
+               <div class="git-link">
+                  <img class="git-logo" src="../img/github-logo.png"/>
+                  <a href="https://github.com/mikecrbenton">github.com/mikecrbenton</a> 
+               </div> 
             </div>
          </div>
 
@@ -102,23 +118,6 @@
          </div>
 
          <div class="about-card">
-            <img src="../img/mike-benton-web.jpg" alt="Mike Benton"/> 
-            <div class="about-text">
-               <p class="team-name"><span id="bold">Mike Benton</span>  <span id="divider">|</span> Web UI Developer</p>
-               <p class="team-bio">Starting out my career as a musician, programming wasn't on my radar, but while managing an eCommerce site for a 
-                  music store I rapidly realized how much I enjoyed the high level of detail and inherit creativity that reside in programming and web design.  I've been 
-                  hooked since then, studying many hours, and even taking some classes. Even so, I've never been able to cross 
-                  the bridge of taking the knowledge I was learning and applying it to an employable skillset .  Lambda has been great putting the pieces together - 
-                  continuously pushing me into new areas much quicker than I previously thought possible.
-               </p>
-               <div class="git-link">
-                  <img class="git-logo" src="../img/github-logo.png"/>
-                  <a href="https://github.com/mikecrbenton">github.com/mikecrbenton</a> 
-               </div> 
-            </div>
-         </div>
-
-         <div class="about-card">
             <img src="../img/tanveer-saleem-web.jpg" alt="Tanveer Saleem"/> 
             <div class="about-text">
                <p class="team-name"><span id="bold">Tanveer Saleem</span>  <span id="divider">|</span> Backend Developer</p>
@@ -129,7 +128,7 @@
                   of new and further dimensions of Information Technology so lambda helped me to achieve all of this.</p>
                <div class="git-link">
                   <img class="git-logo" src="../img/github-logo.png"/>
-                  <a href="https://github.com/immichaelharris">github.com/immichaelharris</a> 
+                  <a href="https://github.com/tanveersaleem786">github.com/tanveersaleem786</a> 
                </div> 
             </div>
          </div>
@@ -175,6 +174,7 @@
 
    </div><!-- main-container -->
 
+     <!-- SWTICH MOBILE MENU LINKS ON/OFF -->
    <script>
 
       function myFunction() {
@@ -182,9 +182,9 @@
         var mobileLinks = document.getElementById("header-links");
 
         if (mobileLinks.style.display === "flex") {
-          mobileLinks.style.display = "none";
+              mobileLinks.style.display = "none";             
         } else {
-          mobileLinks.style.display = "flex";
+             mobileLinks.style.display = "flex";
         }
       }
 

@@ -160,12 +160,13 @@ body {
   border-bottom: 2px solid #272932;
 }
 .main-container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 header .nav-bar {
   position: fixed;
   top: 0;
+  left: 0;
   background-color: hsla(0, 0%, 100%, 0.9);
   width: 100%;
   max-width: 1600px;
@@ -213,58 +214,58 @@ header .nav-bar nav .icon i {
     display: none;
   }
 }
-header .nav-bar nav ul {
+header .nav-bar nav #header-links {
   display: flex;
 }
 @media (max-width: 550px) {
-  header .nav-bar nav ul li {
+  header .nav-bar nav #header-links li {
     text-align: center;
     padding: 1.3em 0;
   }
 }
-header .nav-bar nav ul a {
+header .nav-bar nav #header-links a {
   text-decoration: none;
   color: #272932;
   font-size: 1.5rem;
   transition: font-weight 0.1s;
   margin-right: 1.5em;
 }
-header .nav-bar nav ul a:hover {
+header .nav-bar nav #header-links a:hover {
   font-weight: 600;
 }
 @media (max-width: 550px) {
-  header .nav-bar nav ul a {
+  header .nav-bar nav #header-links a {
     margin-right: 0;
   }
 }
-header .nav-bar nav ul .login-button {
+header .nav-bar nav #header-links .login-button {
   border: 3px solid #272932;
   padding: 0.1em 0.5em;
   transition: background-color 1s;
 }
-header .nav-bar nav ul .login-button:hover {
+header .nav-bar nav #header-links .login-button:hover {
   color: white;
   background-color: #272932;
 }
-header .nav-bar nav ul .login-button:active {
+header .nav-bar nav #header-links .login-button:active {
   border: 1px solid #272932;
 }
 @media (max-width: 550px) {
-  header .nav-bar nav ul .login-button {
+  header .nav-bar nav #header-links .login-button {
     border: 5px solid #272932;
     padding: 0.05em 0.8em;
     transition: background-color 1s;
   }
-  header .nav-bar nav ul .login-button:hover {
+  header .nav-bar nav #header-links .login-button:hover {
     color: white;
     background-color: #272932;
   }
-  header .nav-bar nav ul .login-button:active {
+  header .nav-bar nav #header-links .login-button:active {
     border: 1px solid #272932;
   }
 }
 @media (max-width: 550px) {
-  header .nav-bar nav ul {
+  header .nav-bar nav #header-links {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -304,6 +305,23 @@ header .hero-header .hero-text-container p {
   padding: 0.4em 0.5em;
   line-height: 1em;
   text-shadow: 1px 1px 1px black;
+}
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header .hero-header .hero-text-container p .header-text-1 {
+  animation: fadeInText 3s;
+}
+header .hero-header .hero-text-container p .header-text-2 {
+  animation: fadeInText 6s;
+}
+header .hero-header .hero-text-container p .header-text-3 {
+  animation: fadeInText 9s;
 }
 @media (max-width: 1180px) {
   header .hero-header .hero-text-container p {
@@ -435,7 +453,8 @@ header .hero-header .hero-text-container p {
 }
 .main-content .content-container .content-text-block .main-text-block {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
+  font-weight: 300;
 }
 @media (max-width: 550px) {
   .main-content .content-container .content-text-block .main-text-block {
@@ -654,7 +673,7 @@ footer {
 footer .footer-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 footer .footer-container .footer-box {
   width: 33%;
@@ -675,7 +694,7 @@ footer .footer-container .footer-box .footer-title {
 }
 footer .footer-container .footer-box.footer-contact .contact-text {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.7rem;
   color: #272932;
 }
@@ -694,15 +713,18 @@ footer .footer-container .footer-box.footer-login {
 }
 footer .footer-container .footer-box.footer-login .login-button {
   display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: font-weight 0.1s;
   border: 5px solid #272932;
   padding: 0.2em 0.8em;
   transition: background-color 1s;
-  text-decoration: none;
-  font-size: 2rem;
-  transition: font-weight 0.1s;
   font-weight: 600;
   margin-top: 1em;
   color: #272932;
+}
+footer .footer-container .footer-box.footer-login .login-button:hover {
+  font-weight: 600;
 }
 footer .footer-container .footer-box.footer-login .login-button:hover {
   color: white;
@@ -710,9 +732,6 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
 }
 footer .footer-container .footer-box.footer-login .login-button:active {
   border: 1px solid #272932;
-}
-footer .footer-container .footer-box.footer-login .login-button:hover {
-  font-weight: 600;
 }
 @media (max-width: 850px) {
   footer .footer-container .footer-box.footer-login .login-button {
@@ -737,14 +756,14 @@ footer .footer-container .footer-box.footer-login .login-button:hover {
 }
 footer .footer-container .footer-box.footer-links .links {
   width: 50%;
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   margin: 0 auto;
   text-align: center;
 }
 footer .footer-container .footer-box.footer-links .links a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: font-weight 0.1s;
   color: #272932;
 }

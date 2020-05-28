@@ -10,14 +10,15 @@ header{
       //FIXED HEADER
       position: fixed; 
       top:0;
-      background-color: hsla(0, 0%, 100%,.9);
+      left:0;
+      background-color: hsla(0%, 0%, 100%,.9);
       width: 100%;
       max-width: 1600px;
       box-shadow: 1px 1px 15px gray;
 
       //FLEX PROPERTIES
       .flex-container(space-between);
-      align-items: center; 
+      align-items: center;
 
       .main-h1{
          display:flex;
@@ -53,22 +54,23 @@ header{
                     display: none;
                  }
                   
-               i{
-                  //display: inline-block;
-                  color: @main-font-color;     
-                  
-                  @media (min-width: 551px){
-                     display: none;
+                  i{
+                     //display: inline-block;
+                     color: @main-font-color;     
+                     
+                     @media (min-width: 551px){
+                        display: none;
+                     }
                   }
-                  
                }
               
             //============================================
 
-         ul{
+         #header-links{
             display: flex;
 
             li{
+
                @media @smartphone {
                   text-align: center;
                   padding: 1.3em 0;
@@ -94,7 +96,6 @@ header{
                display: none;   
                flex-direction: column;
                justify-content: center;
-               
             }
          }
 
@@ -138,6 +139,26 @@ header{
             padding: .4em .5em;
             line-height: 1em;
             text-shadow: 1px 1px 1px black;
+
+            // FADE IN MAIN HEADING TEXT-------
+            @keyframes fadeInText {
+               0%{
+                  opacity: 0;
+               }
+               100%{
+                  opacity: 1;
+               }
+            }
+            .header-text-1{
+               animation: fadeInText 3s;
+            }
+            .header-text-2{
+               animation: fadeInText 6s;
+            }
+            .header-text-3{
+               animation: fadeInText 9s;
+            }
+            //---------------------------------
 
             //NEEDED TO DOWNSIZE HEADER TEXT PROGRESSIVELY
             //IN ORDER TO MAKE WORK

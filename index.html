@@ -22,6 +22,7 @@
 
   <div class="main-container">
 
+   <!-- NAVIGATION BAR AND JUMBO PICTURE-->
    <header>
       <div class="nav-bar">
 
@@ -31,13 +32,10 @@
          </div>
 
          <nav>
-
-              <!-- WORKING IN PROGRESS   -->
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <!-- JAVASCRIPT MENU ICON AND CODE FOR MOBILE -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                <i class="fas fa-bars fa-3x"></i>
             </a>
-            <!-- WORKING IN PROGRESS   -->
-
             <ul id="header-links">
                <li><a class="current" href="index.html">Home</a></li>
                <li><a href="about.html">About</a></li>
@@ -49,7 +47,10 @@
    
       <div class="hero-header"> 
          <div class="hero-text-container">
-            <p>Safe.<br> Secure.<br> Generation to Generation</p>
+            <p><span class="header-text-1">Safe.</span><br> 
+               <span class="header-text-2">Secure.</span><br> 
+               <span class="header-text-3">Generation to Generation</span>
+            </p>
          </div>     
       </div>
 
@@ -59,6 +60,7 @@
 
    <main class="main-content">
 
+      <!-- CONTAINER FOR 3 MAIN ICONS ON HOMEPAGE -->
       <div class="icon-container">
 
          <div class="desktop-icon di-1">
@@ -81,14 +83,15 @@
             <i class="fas fa-utensils fa-5x"></i>
             <p class="icon-title">Enjoy</p>
             <p class="icon-content">Peace of mind knowing your recipes
-               are safe to pass on to future generations, and are accessible anywhere at the click
+               are safe for future generations, and accessible anywhere at the click
                of a button
             </p>
          </div>
 
-      </div><!-- icon-container-->
+      </div><!-- end icon-container-->
 
-      <div class="content-container">    
+      <!-- MAIN CONTENT AND IMAGES -->
+      <section class="content-container">    
          <div class="content-text-block">
             <h2>Update</h2>
             <p class="main-text-block">How many recipe books are sitting on your shelf, taking up space and cluttering
@@ -100,13 +103,13 @@
          <div class="content-image-block update-image">
             <p>Update</p>
          </div>
-      </div> 
+      </section> 
 
-      <div class="content-container">
+      <section class="content-container">
          <div class="content-text-block">
             <h2>Create</h2>
-            <p class="main-text-block">Just imagine - you're at you're grandmothers and she wants to cook dinner
-               with you to surprise the family.  The main dish is that recipe you've both been working on
+            <p class="main-text-block">Just imagine - you're with grandma and she wants you two to cook dinner
+               and surprise the family.  The main dish is that recipe you've both been working on
                and perfecting the last several months - a family tradition that was passed down from her grandmother.
                You notice she's searching for the recipe and forgot where she last placed her worn out sheet of notebook paper
                with the steps & ingredients.  Smiling, you pull out your smartphone.
@@ -115,15 +118,16 @@
          <div class="content-image-block create-image">
            <p>Create</p>
          </div>
-      </div>
+      </section>
 
-   </main><!--main-content-->
+   </main><!-- end main-content-->
    
 
 
    <footer>
       <div class="footer-container">
 
+         <!-- CONTACT -->
          <div class="footer-box footer-contact">
             <p class="footer-title">Contact</p>        
             <p class="contact-text">
@@ -134,11 +138,13 @@
             </p>                      
          </div>
 
+         <!-- LOGIN BUTTON -->
          <div class="footer-box footer-login">
             <p class="footer-title">Ready!</p>
             <div><a class="login-button"href="https://secret-family-recipes.netlify.app/">Login</a></div>
          </div>
 
+         <!-- LINKS -->
          <div class="footer-box footer-links">
             <p class="footer-title">Links</p>
             <div class="links">
@@ -158,8 +164,9 @@
 
    </footer>
 
-  </div><!--CLASS MAIN CONTAINER-->
+  </div><!--END CLASS .main-container -->
 
+  <!-- SWTICH MOBILE MENU LINKS ON/OFF -->
   <script>
 
    function myFunction() {

@@ -4,10 +4,9 @@ footer{
    .footer-container{
       display:flex;
       justify-content: space-between ;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
 
       .footer-box{
-         //border: 1px solid red;
          width: 33%;
 
          .footer-title{
@@ -15,8 +14,7 @@ footer{
             text-align:center;
             font-size: 2em;
             margin: 1em auto .5em ;
-            color: @main-font-color;  //TO MATCH LOGIN - KEEP????????
-            //text-shadow: 1px 1px 1px #3f40a1;
+            color: @main-font-color; 
             border-bottom: 1px solid @main-font-color;
             width: 35%;
          }
@@ -31,7 +29,7 @@ footer{
 
          .contact-text{
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             line-height: 1.7rem;
             color: @main-font-color;
 
@@ -54,8 +52,8 @@ footer{
 
          .login-button{
             display: inline-block;
+            .a-href-styling( 1.5rem );
             .button-style( 5px, .2em, .8em, @main-font-color);
-            .a-href-styling( 2rem );
             font-weight: 600;
             margin-top: 1em;
             color: @main-font-color;
@@ -76,13 +74,13 @@ footer{
       .footer-box.footer-links{
          .links{
             width: 50%;  
-            font-size: 1.4rem;
-            line-height: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
             margin: 0 auto;
             text-align: center;
 
             a{
-               .a-href-styling(1.4rem);
+               .a-href-styling(1.2rem);
                color: @main-font-color;
 
                @media @tablet {
