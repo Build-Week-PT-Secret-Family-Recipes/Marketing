@@ -70,7 +70,6 @@ header{
             display: flex;
 
             li{
-
                @media @smartphone {
                   text-align: center;
                   padding: 1.3em 0;
@@ -91,7 +90,6 @@ header{
                   .button-style(5px, .05em, .8em, @main-font-color);
                }
             }
-
             @media @smartphone {   
                display: none;   
                flex-direction: column;
@@ -121,7 +119,7 @@ header{
       margin-top: 96px;
 
       background-image: url("../img/sfr-hero-header.jpg");
-      height: 650;
+      height: 600;
       
       .flex-container(center);
       align-items: center; 
@@ -137,7 +135,7 @@ header{
             text-align: center;
             font-size: 6rem;
             padding: .4em .5em;
-            line-height: 1em;
+            line-height: .9em;
             text-shadow: 1px 1px 1px black;
 
             // FADE IN MAIN HEADING TEXT-------
@@ -195,7 +193,8 @@ header{
       }
 
       @media @smartphone {
-         background-position: center;  
+         background-position: center; 
+         height: 400px; 
       }
 
    }//.hero-header

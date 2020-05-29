@@ -287,7 +287,7 @@ header .nav-bar nav #header-links .login-button:active {
 header .hero-header {
   margin-top: 96px;
   background-image: url("../img/sfr-hero-header.jpg");
-  height: 650;
+  height: 600;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,7 +303,7 @@ header .hero-header .hero-text-container p {
   text-align: center;
   font-size: 6rem;
   padding: 0.4em 0.5em;
-  line-height: 1em;
+  line-height: 0.9em;
   text-shadow: 1px 1px 1px black;
 }
 @keyframes fadeInText {
@@ -362,6 +362,7 @@ header .hero-header .hero-text-container p .header-text-3 {
 @media (max-width: 550px) {
   header .hero-header {
     background-position: center;
+    height: 400px;
   }
 }
 .main-content {
